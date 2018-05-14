@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "module": "es6",
+      "target": "es5",
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": false,
+      "jsx": "react",
+      "outDir": "./ts-build",
+      "baseUrl": "ts",
+      "experimentalDecorators": true,
+      "allowJs": true,
+      "lib": ["es2015", "dom"]
+    },
+    "types": [
+      "node"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+}
