@@ -19,6 +19,10 @@ module.exports = {
     resolve: {
         modules: ['node_modules'],
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        alias: {
+            "src": path.resolve('./src')
+        }
+       
     },
     plugins: [
         definePlugin,
