@@ -1,39 +1,25 @@
-import React from 'react';
+import React from "react";
 
-import './Page.less';
+import "./Page.less";
 
-export default class Page extends React.Component<{}, {}>
-{
-  private content: string[] = ['React', 'Typescript', 'Less', 'Local Server', 'General Libs'];
+const Logo = require("./img/react-logo.svg");
 
-  private renderContentList(): React.ReactNode
-  {
-    return (
+const content = ["React", "Typescript", "Less", "Local Server", "Common Libs"];
+
+export const Page: React.FC = React.memo(() => (
+  <div className="page-wrapper">
+    <section className="page">
+      <h1 className="page__title">Starter Pack</h1>
       <ul className="page__list">
-        {
-          this.content.map((item: string, key) => {
-            return <li key={key} className="page__item">{item}</li>
-          })
-        }
+        {content.map((item, key) => {
+          return (
+            <li key={key} className="page__item">
+              {item}
+            </li>
+          );
+        })}
       </ul>
-    );
-  }
-
-  private renderLogo(): React.ReactNode
-  {
-    return <img src="./img/react-logo.svg" alt="react-logo" className="page__logo"/>
-  }
-
-  render()
-  {
-    return (
-      <div className="page-wrapper">
-        <div className="page">
-          <h1 className="page__title">Starter Pack</h1>
-          {this.renderContentList()}
-          {this.renderLogo()}
-        </div>
-      </div>
-    )
-  }
-}
+      <img src={Logo} alt="react-logo" className="page__logo" />
+    </section>
+  </div>
+));
