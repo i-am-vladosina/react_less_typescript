@@ -37,7 +37,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "decko": "^1.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }
