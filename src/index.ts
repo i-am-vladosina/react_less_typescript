@@ -1,6 +1,8 @@
-import ReactDOM from "react-dom";
-import React from "react";
+import "./styles/index.scss";
 
-import { Page } from "src/page/Page";
+import { createRoot } from "react-dom/client";
+import { App } from "./App";
+import { createElement } from "react";
 
-ReactDOM.render(React.createElement(Page), document.getElementById("root"));
+const root = createRoot(document.getElementById("page-root"));
+root.render(createElement(App));
